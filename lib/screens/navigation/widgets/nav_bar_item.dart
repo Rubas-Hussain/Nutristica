@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nutritionist_app/utils/responsive_util.dart';
 
-import '../../utils/app_colors.dart';
-import '../../utils/app_textstyles.dart';
-import '../../utils/assets.dart';
+import '../../../utils/app_colors.dart';
+import '../../../utils/app_textstyles.dart';
+import '../../../utils/assets.dart';
 
 class NavBarItem extends StatelessWidget {
   final String? svgIconPath;
