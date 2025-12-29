@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:nutritionist_app/utils/responsive_util.dart';
 
 import '../../../utils/app_colors.dart';
@@ -24,41 +25,53 @@ class NavBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onPress,
-      child: SizedBox(
-        height: 45.h,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            if (svgIconPath != null)
-              SvgPicture.asset(
-                svgIconPath ?? '',
-                color: isSelected
-                    ? AppColors.blackColor
-                    : AppColors.yellow4Color,
-                height: 26.h,
-                width: 26.w,
-              )
-            else if (iconData != null)
-              Icon(
-                iconData,
-                color: isSelected
-                    ? AppColors.blackColor
-                    : AppColors.yellow4Color,
-                size: 26.sp,
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onPress,
+        customBorder: CircleBorder(),
+        // splashColor: Colors.blue,
+        splashColor: AppColors.greyColor.withOpacity(0.1),
+        highlightColor: AppColors.greyColor.withOpacity(0.1),
+        child: Container(
+          width: context.width*0.19,
+          height: 70.h,
+          decoration: BoxDecoration(
+          // color: Colors.red,
+          //   shape: BoxShape.circle
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (svgIconPath != null)
+                SvgPicture.asset(
+                  svgIconPath ?? '',
+                  color: isSelected
+                      ? AppColors.blackColor
+                      : AppColors.yellow4Color,
+                  height: 26.h,
+                  width: 26.w,
+                )
+              else if (iconData != null)
+                Icon(
+                  iconData,
+                  color: isSelected
+                      ? AppColors.blackColor
+                      : AppColors.yellow4Color,
+                  size: 26.sp,
+                ),
+              Text(
+                title,
+                style: AppTextStyles.m500black14.copyWith(
+                  fontSize: 12.sp,
+                  color: isSelected
+                      ? AppColors.blackColor
+                      : AppColors.yellow4Color,
+                ),
               ),
-            Text(
-              title,
-              style: AppTextStyles.m500black14.copyWith(
-                fontSize: 12.sp,
-                color: isSelected
-                    ? AppColors.blackColor
-                    : AppColors.yellow4Color,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

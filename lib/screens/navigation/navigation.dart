@@ -20,8 +20,8 @@ class Navigation extends StatelessWidget {
         child: Container(
           height: 70.h,
           width: context.width,
-          padding: EdgeInsets.symmetric(horizontal: 51.w),
-          // padding: EdgeInsets.all(6.r),
+          // padding: EdgeInsets.symmetric(horizontal: 51.w),
+          padding: EdgeInsets.only(left:25.w,right:25.w,),
           margin: EdgeInsets.symmetric(horizontal: 24.w).copyWith(bottom: 24.h),
           decoration: BoxDecoration(
             gradient: LinearGradient(
