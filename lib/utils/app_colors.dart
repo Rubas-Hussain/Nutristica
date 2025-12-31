@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColors{
+    static Color white1Color=Color(0xfff9f9f9);
     static Color offWhiteColor=Color(0xfffafef7);
 
     static Color yellowColor=Color(0xffd3f2af);
@@ -14,7 +15,7 @@ class AppColors{
     static Color lightGreyColor=Color(0xfff7f8f8);
     static Color orangeColor=Color(0xfffa7315);
     static Color blueColor=Color(0xff2663eb);
-    static Color lightGreenColor=Color(0xff84cc18);
+        static Color lightGreenColor=Color(0xff84cc18);
 
     //bmi Card colors
     static Color lightBlueColor=Color(0xff4FC3F7);

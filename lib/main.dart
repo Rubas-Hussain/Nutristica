@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nutritionist_app/screens/home/home_screen.dart';
+import 'package:nutritionist_app/auth/login/login_screen.dart';
 import 'package:get/get.dart';
-import 'package:nutritionist_app/screens/navigation/navigation.dart';
-import 'package:nutritionist_app/screens/splash_screen.dart';
 import 'package:nutritionist_app/utils/responsive_util.dart';
 
 void main() {
@@ -26,7 +24,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: Navigation(),
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }

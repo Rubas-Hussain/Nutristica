@@ -66,16 +66,16 @@ class HomeCalorieBreakDownWidget extends StatelessWidget {
                     //     child: Icon(LucideIcons.flame,color: Colors.white,size: 20.r,),
                     //     // child: Icon(Icons.local_fire_department_sharp,color: Colors.white,size: 24.r,),
                     //   ),),
-                    SizedBox(
-                      // color:Colors.red,
-                      width: 100,
-                      height: 100,
-
+                    Container(
+                      width: 100.w,
+                      height: 100.h,
                       child: SfCircularChart(
                         margin: EdgeInsets.zero,
                         series: <CircularSeries>[
                           RadialBarSeries<CalorieChartData, String>(
-                            gap: '0%',
+                            gap: '40%',
+                            // gap: '5?x5%',
+                            radius: '50',
                             dataSource: [controller.chartData[i]],
                             xValueMapper: (CalorieChartData data, _) => data.nutrient,
                             yValueMapper: (CalorieChartData data, _) => data.value,
@@ -83,7 +83,8 @@ class HomeCalorieBreakDownWidget extends StatelessWidget {
                             maximumValue: 100,
                             cornerStyle: CornerStyle.bothCurve,
                             trackColor: AppColors.offWhiteColor,
-                            // strokeColor: AppColors.offWhiteColor,
+                            strokeColor: AppColors.offWhiteColor,
+                            strokeWidth: 1.5.w,
                             // dataLabelSettings: const DataLabelSettings(
                             //   isVisible: true,
                             //   textStyle: TextStyle(color: Colors.white, fontSize: 12),

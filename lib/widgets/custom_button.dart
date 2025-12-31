@@ -15,22 +15,15 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPress,
+      // splashColor: AppColors.greyColor,
+      // highlightColor: AppColors.greyColor,
       child: Container(
         height: 50.h,
         width: context.width,
         decoration: BoxDecoration(
           color: AppColors.yellow2Color,
-          // gradient: LinearGradient(
-          //   begin: Alignment.topCenter,
-          //   end: AlignmentGeometry.bottomCenter,
-          //   colors: [
-          //     AppColors.yellow2Color,
-          //     AppColors.yellow3Color,
-          //     AppColors.yellow2Color,
-          //   ],
-          // ),
-          border: Border.all(color: AppColors.yellow4Color.withOpacity(0.1)),
-          borderRadius: BorderRadius.circular(44.r),
+          // border: Border.all(color: AppColors.yellow4Color.withOpacity(0.1)),
+          borderRadius: BorderRadius.circular(12.r),
         ),
         child:icon!=null ?
         Row(
