@@ -10,6 +10,7 @@ import 'package:nutritionist_app/widgets/navigation_header_widget.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_textstyles.dart';
 import '../../widgets/decorated_background_container.dart';
+import '../../widgets/food_log_floating_action_button.dart';
 import 'widgets/feature_tile.dart';
 
 class MoreScreen extends StatefulWidget {
@@ -61,6 +62,7 @@ class _MoreScreenState extends State<MoreScreen> {
           ),
         ),
       ),
+        floatingActionButton: FoodLogFloatingActionButton(onPress: (){})
     );
   }
   

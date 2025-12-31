@@ -12,6 +12,7 @@ import 'package:nutritionist_app/utils/app_textstyles.dart';
 import 'package:nutritionist_app/utils/assets.dart';
 import 'package:nutritionist_app/utils/responsive_util.dart';
 import 'package:nutritionist_app/widgets/decorated_background_container.dart';
+import 'package:nutritionist_app/widgets/food_log_floating_action_button.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 import '../../models/calorie_models/calorie_chart_data_model.dart';
@@ -135,10 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
+      floatingActionButton: FoodLogFloatingActionButton(onPress: (){})
     );
   }
 }

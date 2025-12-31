@@ -12,5 +12,7 @@ class Assets{
   static String peachIcon='$_svgsPath/peach.svg';
   static String homeIcon='$_svgsPath/home.svg';
   static String progressIcon='$_svgsPath/activity.svg';
+  static String eyeOpenIcon='$_svgsPath/eye_open.svg';
+  static String eyeCloseIcon='$_svgsPath/eye_close.svg';
 
 }

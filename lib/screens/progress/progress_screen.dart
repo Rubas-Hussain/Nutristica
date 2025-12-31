@@ -10,6 +10,7 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_textstyles.dart';
 import '../../widgets/decorated_background_container.dart';
+import '../../widgets/food_log_floating_action_button.dart';
 import '../../widgets/multi_segment_slider.dart';
 import '../../widgets/navigation_header_widget.dart';
 import '../home/widgets/home_header.dart';
@@ -87,6 +88,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
           ),
         ),
       ),
+        floatingActionButton: FoodLogFloatingActionButton(onPress: (){})
     );
 
   }

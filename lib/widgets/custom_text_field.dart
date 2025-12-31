@@ -19,6 +19,7 @@ class CustomTextField extends StatelessWidget {
   final bool? filled;
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
+  final Color? fillColor;
 
   const CustomTextField(
       {super.key,
@@ -26,17 +27,18 @@ class CustomTextField extends StatelessWidget {
         required this.hintText,
         this.type,
         this.obscureText,
-        this.suffixIcon, this.contentPadding, this.expands, this.maxLines, this.prefixIcon, this.borderRadius, this.enabled, this.filled, this.enabledBorder, this.focusedBorder});
+        this.suffixIcon, this.contentPadding, this.expands, this.maxLines, this.prefixIcon, this.borderRadius, this.enabled, this.filled, this.enabledBorder, this.focusedBorder, this.fillColor});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+
       enabled: enabled ?? true,
       // clipBehavior: Clip.hardEdge,
       textAlign: TextAlign.left,
       expands: expands ?? false,
       controller: controller,
-      cursorColor: AppColors.yellow2Color,
+      cursorColor: AppColors.black2Color,
       onTapOutside: (event) {
         FocusScope.of(context).unfocus();
       },
@@ -47,21 +49,21 @@ class CustomTextField extends StatelessWidget {
           isDense: true,
           suffixIcon: suffixIcon,
           prefixIcon: prefixIcon,
-          contentPadding:contentPadding ?? EdgeInsets.symmetric(vertical:12.h,horizontal: 10.w),
+          contentPadding:contentPadding ?? EdgeInsets.symmetric(vertical:18.h,horizontal: 15.w),
           hintText: hintText,
           border: InputBorder.none,
           hintStyle: AppTextStyles.r400black14.copyWith(
               fontWeight: FontWeight.w300,
-              fontSize: 15.sp,
+              fontSize: 12.sp,
               color: AppColors.blackColor.withOpacity(0.7)),
-          // fillColor: Color(0xfff2f2f2),
-          fillColor: Color(0xFFEAEAde).withOpacity(0.7),
+          fillColor: Color(0xfff2f2f2),
+          // fillColor:fillColor ?? Color(0xFFEAEAde).withOpacity(0.7),
           filled:filled ?? true,
           enabledBorder:enabledBorder ?? OutlineInputBorder(
               borderSide: const BorderSide(color: Colors.white),
               borderRadius:borderRadius ?? BorderRadius.circular(12.r)),
           focusedBorder:focusedBorder ?? OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.yellow4Color),
+              borderSide: BorderSide(color: Colors.white),
               borderRadius:borderRadius ?? BorderRadius.all(Radius.circular(12.r))),
 
           enabled: true),

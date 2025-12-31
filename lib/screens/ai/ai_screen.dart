@@ -5,6 +5,7 @@ import 'package:nutritionist_app/widgets/navigation_header_widget.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_textstyles.dart';
 import '../../widgets/decorated_background_container.dart';
+import '../../widgets/food_log_floating_action_button.dart';
 
 class AIScreen extends StatelessWidget {
   const AIScreen({super.key});
@@ -36,6 +37,7 @@ class AIScreen extends StatelessWidget {
           ),
         ),
       ),
+        floatingActionButton: FoodLogFloatingActionButton(onPress: (){})
     );
   }
 }

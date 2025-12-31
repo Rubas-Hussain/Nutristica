@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nutritionist_app/controllers/navigation_controller.dart';
 import 'package:nutritionist_app/screens/home/home_screen.dart';
-import 'package:nutritionist_app/screens/navigation/nav_bar_item.dart';
+import 'package:nutritionist_app/screens/navigation/widgets/nav_bar_item.dart';
 import 'package:nutritionist_app/utils/assets.dart';
 import 'package:nutritionist_app/utils/responsive_util.dart';
 import '../../utils/app_colors.dart';
@@ -20,8 +20,8 @@ class Navigation extends StatelessWidget {
         child: Container(
           height: 70.h,
           width: context.width,
-          padding: EdgeInsets.symmetric(horizontal: 51.w),
-          // padding: EdgeInsets.all(6.r),
+          // padding: EdgeInsets.symmetric(horizontal: 51.w),
+          padding: EdgeInsets.only(left:25.w,right:25.w,),
           margin: EdgeInsets.symmetric(horizontal: 24.w).copyWith(bottom: 24.h),
           decoration: BoxDecoration(
             gradient: LinearGradient(
